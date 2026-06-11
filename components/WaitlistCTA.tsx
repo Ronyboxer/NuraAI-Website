@@ -35,18 +35,18 @@ export default function WaitlistCTA() {
   return (
     <section
       id="waitlist"
-      className="relative overflow-hidden bg-stone-50 py-24 sm:py-32"
+      className="relative overflow-hidden bg-sagebg py-32"
     >
-      <Glow className="left-1/2 top-[-6rem] h-[34rem] w-[34rem] -translate-x-1/2 opacity-70" />
+      <Glow className="left-1/2 top-[-6rem] h-[34rem] w-[34rem] -translate-x-1/2 opacity-80" />
 
       <div className="relative mx-auto max-w-2xl px-5 text-center sm:px-8">
         <Reveal>
-          <h2 className="font-display text-balance text-3xl font-semibold leading-tight tracking-tight text-stone-900 sm:text-5xl">
+          <h2 className="font-display text-balance text-3xl font-semibold leading-tight tracking-tight text-forest sm:text-5xl">
             {waitlist.heading}
           </h2>
         </Reveal>
         <Reveal delay={80}>
-          <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-stone-600">
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-ink">
             {waitlist.subhead}
           </p>
         </Reveal>
@@ -60,7 +60,7 @@ export default function WaitlistCTA() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: "easeOut" }}
-                  className="flex items-center justify-center gap-3 rounded-2xl border border-emerald-200 bg-emerald-50 px-6 py-5 text-emerald-800"
+                  className="flex items-center justify-center gap-3 rounded-2xl border border-sage/30 bg-sage-tint px-6 py-5 text-forest"
                   role="status"
                 >
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0" aria-hidden="true" />
@@ -90,7 +90,7 @@ export default function WaitlistCTA() {
                       onChange={(e) => setEmail(e.target.value)}
                       aria-invalid={error ? true : undefined}
                       aria-describedby={error ? "waitlist-error" : undefined}
-                      className="h-[52px] w-full rounded-2xl border border-stone-300 bg-white px-5 text-base text-stone-900 placeholder:text-stone-400 focus-visible:border-accent-deep"
+                      className="h-[52px] w-full rounded-2xl border border-line bg-white px-5 text-base text-forest placeholder:text-ink/50 focus-visible:border-sage"
                     />
                   </div>
                   <motion.button
@@ -98,7 +98,7 @@ export default function WaitlistCTA() {
                     whileHover={{ y: -2 }}
                     whileTap={{ y: 0, scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                    className="inline-flex h-[52px] items-center justify-center gap-2 rounded-2xl bg-accent-deep px-6 text-base font-semibold text-white shadow-soft transition-colors hover:bg-[#c2410c]"
+                    className="inline-flex h-[52px] items-center justify-center gap-2 rounded-2xl bg-sage-btn px-6 text-base font-semibold text-white shadow-soft transition-colors hover:bg-sage-deep"
                   >
                     {waitlist.button}
                     <ArrowRight className="h-5 w-5" aria-hidden="true" />
@@ -110,7 +110,7 @@ export default function WaitlistCTA() {
             {error && !submitted && (
               <p
                 id="waitlist-error"
-                className="mt-3 text-left text-sm font-medium text-accent-deep"
+                className="mt-3 text-left text-sm font-medium text-clay-text"
                 role="alert"
               >
                 {error}
@@ -118,8 +118,8 @@ export default function WaitlistCTA() {
             )}
 
             {!submitted && (
-              <p className="mt-4 text-sm text-stone-500">
-                No spam, ever. We&apos;ll only email you about Lumen.
+              <p className="mt-4 text-sm text-ink/70">
+                No spam, ever. We&apos;ll only email you about Nura.
               </p>
             )}
           </div>

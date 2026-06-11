@@ -21,8 +21,9 @@ export default function Glow({ className = "", animate = false }: GlowProps) {
       aria-hidden="true"
       className={`pointer-events-none absolute rounded-full blur-3xl ${className}`}
       style={{
+        // Soft sage-green glow, kept subtle.
         background:
-          "radial-gradient(circle at center, rgba(251,146,60,0.55) 0%, rgba(251,191,36,0.30) 45%, rgba(255,255,255,0) 72%)",
+          "radial-gradient(circle at center, rgba(92,130,104,0.30) 0%, rgba(146,176,150,0.16) 45%, rgba(255,255,255,0) 72%)",
       }}
       animate={
         shouldAnimate

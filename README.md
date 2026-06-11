@@ -1,6 +1,6 @@
-# Lumen — Marketing Website
+# Nura — Marketing Website
 
-A warm, calm marketing landing page for **Lumen**, a gentle voice-first companion
+A warm, calm marketing landing page for **Nura**, a gentle voice-first companion
 for older adults living with dementia, Alzheimer's, and memory loss. The site is
 designed for the **family caregiver**: trustworthy, reassuring, and easy to read.
 
@@ -13,7 +13,7 @@ designed for the **family caregiver**: trustworthy, reassuring, and easy to read
 - **Tailwind CSS** (v3, classic `tailwind.config.ts`)
 - **Framer Motion** for all animation
 - **lucide-react** for icons
-- **next/font/google** — Fraunces (display serif) + Plus Jakarta Sans (body)
+- **next/font/google** — Fraunces (display serif) + Inter (body)
 
 ## Run it
 
@@ -45,7 +45,7 @@ components/
   AnswerDemo.tsx    # looping Q&A device mock (the centerpiece)
   Problem.tsx
   HowItWorks.tsx    # three step cards
-  SafetyPromise.tsx # "Lumen never makes things up" — the trust anchor
+  SafetyPromise.tsx # "Nura never makes things up" — the trust anchor
   WhoItsFor.tsx
   Features.tsx      # six feature cards
   Faq.tsx           # accessible accordion
@@ -55,19 +55,19 @@ components/
     Button.tsx      # shared button with hover lift
     Glow.tsx        # reusable warm radial glow
     Reveal.tsx      # scroll-reveal wrapper
-    motion.ts       # shared Framer Motion variants
     icons.ts        # lucide icon name → component map
 content/
   site.ts           # all copy in one place
-tailwind.config.ts  # palette (orange/amber + stone) + fonts
+tailwind.config.ts  # palette (sage/cream/forest/clay) + fonts
 ```
 
 ## Design notes
 
-- **Palette:** warm white + warm gray (`stone`) with orange/amber accents.
-  Orange is used only for accents, icons, highlights, and buttons (deep
-  `#EA580C` with white text for WCAG AA contrast) — never for body text.
-- **Type:** Fraunces for headlines, Plus Jakarta Sans for body/UI.
+- **Palette:** warm cream (`#FAF8F3`) + light sage (`#EFF3EC`) with sage-green
+  accents (`#5C8268`), deep forest headings (`#1E3A2B`), green-gray body text
+  (`#4A5A50`), and a muted clay (`#C77B4F`) secondary accent. Filled buttons use
+  a slightly deeper sage (`#52785E`) so white label text clears WCAG AA (~5:1).
+- **Type:** Fraunces for headlines, Inter for body/UI.
 - **Motion:** transform + opacity only. Hero load-in, scroll reveals, hover
   micro-interactions, a looping Answer Demo, and a gently pulsing hero glow.
 - **Accessibility:** semantic landmarks, one `h1`, visible focus rings,
@@ -81,4 +81,4 @@ The form in `components/WaitlistCTA.tsx` is client-side only. Search for
 
 ---
 
-Lumen is not a medical device and does not provide medical advice.
+Nura is not a medical device and does not provide medical advice.

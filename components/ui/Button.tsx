@@ -16,14 +16,14 @@ interface ButtonProps {
 }
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-base font-semibold min-h-[44px] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-deep";
+  "inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-base font-semibold min-h-[44px] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest";
 
 const variants: Record<Variant, string> = {
-  // Deep orange + white text for WCAG AA contrast.
-  primary:
-    "bg-accent-deep text-white shadow-soft hover:bg-[#c2410c]", // hover deepens (orange-700)
+  // Sage filled + white text. Resting tone clears WCAG AA (~5:1); hover deepens.
+  primary: "bg-sage-btn text-white shadow-soft hover:bg-sage-deep",
+  // Cream with a forest-green border + forest text.
   secondary:
-    "bg-white text-stone-900 border border-stone-200 hover:bg-stone-50 hover:border-stone-300",
+    "bg-cream text-forest border border-forest/30 hover:border-forest/60 hover:bg-sage-tint",
 };
 
 export default function Button({

@@ -10,16 +10,16 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-white py-24 sm:py-28">
+    <section id="faq" className="bg-cream py-32">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <Reveal className="text-center">
-          <h2 className="font-display text-balance text-3xl font-semibold tracking-tight text-stone-900 sm:text-[2.6rem]">
+          <h2 className="font-display text-balance text-3xl font-semibold tracking-tight text-forest sm:text-[2.6rem]">
             {faq.heading}
           </h2>
         </Reveal>
 
         <Reveal className="mt-12">
-          <ul className="divide-y divide-stone-200 overflow-hidden rounded-3xl border border-stone-200 bg-stone-50">
+          <ul className="divide-y divide-line overflow-hidden rounded-card border border-line bg-sagebg">
             {faq.items.map((item, i) => {
               const isOpen = open === i;
               const panelId = `faq-panel-${i}`;
@@ -33,15 +33,15 @@ export default function Faq() {
                       aria-expanded={isOpen}
                       aria-controls={panelId}
                       onClick={() => setOpen(isOpen ? null : i)}
-                      className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-stone-100"
+                      className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-sage-tint"
                     >
-                      <span className="text-lg font-semibold text-stone-900">
+                      <span className="text-lg font-semibold text-forest">
                         {item.q}
                       </span>
                       <motion.span
                         animate={{ rotate: isOpen ? 45 : 0 }}
                         transition={{ duration: 0.25, ease: "easeOut" }}
-                        className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-full bg-accent-tint text-accent-deep"
+                        className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-full bg-sage-tint text-sage-deep"
                       >
                         <Plus className="h-5 w-5" aria-hidden="true" />
                       </motion.span>
@@ -59,7 +59,7 @@ export default function Faq() {
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="px-6 pb-6 pt-0 text-pretty leading-relaxed text-stone-600">
+                        <p className="px-6 pb-6 pt-0 text-pretty leading-relaxed text-ink">
                           {item.a}
                         </p>
                       </motion.div>

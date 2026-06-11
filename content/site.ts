@@ -1,7 +1,7 @@
 // All site copy lives here so it's easy to edit in one place.
 
 export const nav = {
-  brand: "Lumen",
+  brand: "Nura",
   links: [
     { label: "How it works", href: "#how-it-works" },
     { label: "Safety", href: "#safety" },
@@ -15,20 +15,21 @@ export const hero = {
   eyebrow: "For families living with dementia and memory loss",
   headline: "The same kind answer, every time they ask.",
   subhead:
-    "Lumen is a gentle voice companion for people living with dementia and Alzheimer's. Your family writes the answers — Lumen shares them warmly, patiently, and only ever the truth you've given it.",
+    "Nura is a gentle voice companion for people living with dementia and Alzheimer's. Your family writes the answers — Nura shares them warmly, patiently, and only ever the truth you've given it.",
   primaryCta: "Join the waitlist",
   secondaryCta: "See how it works",
 };
 
-// Example exchanges for the looping Answer Demo.
+// Example exchanges for the looping Answer Demo. The lunch exchange leads, since
+// it's the featured conversation (and what shows statically under reduced motion).
 export const answerDemo = [
-  {
-    question: "What's my granddaughter's name?",
-    answer: "Her name is Sarah. She visits every Sunday.",
-  },
   {
     question: "Did I have lunch today?",
     answer: "You did — you had soup at noon. You're all set.",
+  },
+  {
+    question: "What's my granddaughter's name?",
+    answer: "Her name is Sarah. She visits every Sunday.",
   },
   {
     question: "Where do I live now?",
@@ -42,7 +43,7 @@ export const problem = {
 };
 
 export const howItWorks = {
-  heading: "How Lumen works",
+  heading: "How Nura works",
   steps: [
     {
       icon: "NotebookPen",
@@ -57,23 +58,23 @@ export const howItWorks = {
     {
       icon: "Heart",
       title: "They hear the truth, warmly",
-      body: "Lumen finds the answer you wrote and says it kindly — the 40th time as gently as the first.",
+      body: "Nura finds the answer you wrote and says it kindly — the 40th time as gently as the first.",
     },
   ],
 };
 
 export const safety = {
-  heading: "Lumen never makes things up.",
+  heading: "Nura never makes things up.",
   body1:
-    "Most AI guesses when it doesn't know. For someone living with memory loss, a confident wrong answer can be frightening. Lumen is built the opposite way.",
+    "Most AI guesses when it doesn't know. For someone living with memory loss, a confident wrong answer can be frightening. Nura is built the opposite way.",
   body2:
-    "Every answer comes only from what your family has written — never invented, never imagined. If Lumen doesn't have an answer, it gently says so, in the words you chose. And it never corrects or argues. It comforts.",
+    "Every answer comes only from what your family has written — never invented, never imagined. If Nura doesn't have an answer, it gently says so, in the words you chose. And it never corrects or argues. It comforts.",
   callout: "Your words in. Your words out. Nothing made up.",
 };
 
 export const whoItsFor = {
   heading: "Made for memory loss — and the families who carry it.",
-  body: "Lumen supports older adults living with dementia, Alzheimer's, and other forms of cognitive decline, and the spouses, children, and grandchildren caring for them. It works alongside you — never instead of you.",
+  body: "Nura supports older adults living with dementia, Alzheimer's, and other forms of cognitive decline, and the spouses, children, and grandchildren caring for them. It works alongside you — never instead of you.",
 };
 
 export const features = {
@@ -92,7 +93,7 @@ export const features = {
     {
       icon: "Infinity",
       title: "Endlessly patient",
-      body: "Asks again? Lumen answers as warmly as the very first time.",
+      body: "Asks again? Nura answers as warmly as the very first time.",
     },
     {
       icon: "HandHeart",
@@ -116,12 +117,12 @@ export const faq = {
   heading: "Questions families ask",
   items: [
     {
-      q: "Does Lumen replace a caregiver?",
-      a: "No. Lumen lightens the load of constant repetition so you can be present for the moments that matter. It works alongside you, never instead of you.",
+      q: "Does Nura replace a caregiver?",
+      a: "No. Nura lightens the load of constant repetition so you can be present for the moments that matter. It works alongside you, never instead of you.",
     },
     {
       q: "Does it make things up like other AI?",
-      a: "Never. Lumen only shares the answers your family has written. If it doesn't have one, it says so gently.",
+      a: "Never. Nura only shares the answers your family has written. If it doesn't have one, it says so gently.",
     },
     {
       q: "Is our information private?",
@@ -129,15 +130,15 @@ export const faq = {
     },
     {
       q: "What if my parent says something that isn't true?",
-      a: "Lumen won't correct or argue. It responds with the gentle, reassuring answer your family chose in advance.",
+      a: "Nura won't correct or argue. It responds with the gentle, reassuring answer your family chose in advance.",
     },
     {
       q: "What devices does it work on?",
-      a: "Lumen starts as a simple voice-and-screen app, with an offline home device on the way.",
+      a: "Nura starts as a simple voice-and-screen app, with an offline home device on the way.",
     },
     {
       q: "Is this a medical device?",
-      a: "No. Lumen is a comfort and memory-support companion, not a medical or diagnostic tool.",
+      a: "No. Nura is a comfort and memory-support companion, not a medical or diagnostic tool.",
     },
   ],
 };
@@ -145,14 +146,14 @@ export const faq = {
 export const waitlist = {
   heading: "Be there for the moment, not the question.",
   subhead:
-    "Join the waitlist and we'll let you know the moment Lumen is ready for your family.",
+    "Join the waitlist and we'll let you know the moment Nura is ready for your family.",
   emailPlaceholder: "your@email.com",
   button: "Join the waitlist",
   success: "Thank you — we'll be in touch soon.",
 };
 
 export const footer = {
-  brand: "Lumen",
+  brand: "Nura",
   tagline: "the same kind answer, every time.",
   links: [
     { label: "How it works", href: "#how-it-works" },
@@ -161,6 +162,6 @@ export const footer = {
     { label: "FAQ", href: "#faq" },
   ],
   disclaimer:
-    "Lumen is not a medical device and does not provide medical advice.",
+    "Nura is not a medical device and does not provide medical advice.",
   builtWith: "Built with care.",
 };
