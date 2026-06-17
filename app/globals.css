@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: #faf8f3; /* warm cream */
-    --foreground: #1e3a2b; /* deep forest green */
+    --background: #f6f9fd; /* canvas — clear morning sky */
+    --foreground: #1f3148; /* ink — text primary */
   }
 
   html {
@@ -24,14 +24,15 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Visible, consistent focus rings on every interactive element. */
+  /* Visible, consistent focus rings on every interactive element.
+     Sky-blue outline — never color alone. */
   :focus-visible {
-    outline: 2px solid #1e3a2b; /* forest green */
+    outline: 3px solid #5a8fd6; /* sky */
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 8px;
   }
 
-  /* Fraunces benefits from gentle optical sizing. */
+  /* Lora benefits from gentle optical sizing. */
   .font-display {
     font-optical-sizing: auto;
   }
@@ -50,6 +51,7 @@
    * JavaScript dependency — so the most important above-the-fold content is
    * never left invisible while the bundle hydrates (or if it fails to load).
    * `both` fill-mode keeps the final state. Stagger via inline animation-delay.
+   * Uses the brand's calm ease-out (--ease-soft).
    */
   @keyframes enter-up {
     from {
@@ -63,7 +65,7 @@
   }
 
   .enter-up {
-    animation: enter-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: enter-up 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
   }
 }
 

@@ -59,23 +59,24 @@ export default function AnswerDemo() {
       aria-label={`Nura demo. Question: ${current.question} Answer: ${current.answer}`}
     >
       {/* Device card */}
-      <div className="relative overflow-hidden rounded-[1.75rem] border border-line bg-white p-6 shadow-soft-lg sm:p-7">
-        {/* Soft top wash */}
+      <div className="relative overflow-hidden rounded-[1.5rem] border border-line bg-surface p-6 shadow-soft-lg sm:p-7">
+        {/* Soft top sky wash */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-sage-tint to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-tint to-transparent"
         />
 
         {/* Header row */}
         <div className="relative mb-6 flex items-center gap-2.5">
-          <span className="grid h-8 w-8 place-items-center rounded-[0.7rem] bg-sage-gradient">
-            <Volume2 className="h-4 w-4 text-white" aria-hidden="true" />
+          {/* Warm sun tile + dark ink icon — echoes the patient talk control. */}
+          <span className="grid h-8 w-8 place-items-center rounded-[0.7rem] bg-sun shadow-talk">
+            <Volume2 className="h-4 w-4 text-ink" aria-hidden="true" />
           </span>
-          <span className="font-display text-lg font-semibold text-forest">
+          <span className="font-display text-lg font-semibold text-ink">
             Nura
           </span>
-          <span className="ml-auto inline-flex items-center gap-1.5 text-xs font-medium text-ink">
-            <span className="h-2 w-2 rounded-full bg-sage" />
+          <span className="ml-auto inline-flex items-center gap-1.5 text-xs font-medium text-slate">
+            <span className="h-2 w-2 rounded-full bg-sky" />
             Listening
           </span>
         </div>
@@ -89,7 +90,7 @@ export default function AnswerDemo() {
               animate={{ opacity: 1, y: 0 }}
               exit={reduceMotion ? undefined : { opacity: 0, y: -8 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
-              className="max-w-[85%] rounded-2xl rounded-tr-md border border-line bg-white px-4 py-3 text-[15px] font-medium text-ink"
+              className="max-w-[85%] rounded-2xl rounded-tr-md border border-line bg-tint px-4 py-3 text-[15px] font-medium text-slate"
             >
               {current.question}
             </motion.div>
@@ -106,13 +107,13 @@ export default function AnswerDemo() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="flex items-center gap-1.5 rounded-2xl rounded-tl-md bg-sage-tint px-4 py-4"
+                className="flex items-center gap-1.5 rounded-2xl rounded-tl-md bg-tint px-4 py-4"
                 aria-hidden="true"
               >
                 {[0, 1, 2].map((d) => (
                   <motion.span
                     key={d}
-                    className="h-2.5 w-2.5 rounded-full bg-sage"
+                    className="h-2.5 w-2.5 rounded-full bg-sky"
                     animate={{ opacity: [0.3, 1, 0.3], y: [0, -3, 0] }}
                     transition={{
                       duration: 1,
@@ -130,7 +131,7 @@ export default function AnswerDemo() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={reduceMotion ? undefined : { opacity: 0, y: -8 }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
-                className="max-w-[88%] rounded-2xl rounded-tl-md bg-bubble-gradient px-4 py-3 text-[15px] font-medium leading-relaxed text-forest shadow-soft"
+                className="max-w-[88%] rounded-2xl rounded-tl-md border border-line border-l-[5px] border-l-sun bg-surface px-4 py-3 text-[15px] font-medium leading-relaxed text-ink shadow-soft"
               >
                 {current.answer}
               </motion.div>
@@ -139,14 +140,14 @@ export default function AnswerDemo() {
         </div>
       </div>
 
-      {/* Soft floating glints */}
+      {/* Soft floating glints — one warm, one sky */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-3 -top-3 h-16 w-16 rounded-full bg-sage/20 blur-xl"
+        className="pointer-events-none absolute -right-3 -top-3 h-16 w-16 rounded-full bg-sun/25 blur-xl"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-4 -left-4 h-20 w-20 rounded-full bg-bubble-to/40 blur-xl"
+        className="pointer-events-none absolute -bottom-4 -left-4 h-20 w-20 rounded-full bg-sky/25 blur-xl"
       />
     </div>
   );

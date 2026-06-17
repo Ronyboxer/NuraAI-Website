@@ -48,18 +48,18 @@ export default function WaitlistCTA() {
   return (
     <section
       id="waitlist"
-      className="relative overflow-hidden bg-sagebg py-32"
+      className="relative overflow-hidden bg-tint py-32"
     >
       <Glow className="left-1/2 top-[-6rem] h-[34rem] w-[34rem] -translate-x-1/2 opacity-80" />
 
       <div className="relative mx-auto max-w-2xl px-5 text-center sm:px-8">
         <Reveal>
-          <h2 className="font-display text-balance text-3xl font-semibold leading-tight tracking-tight text-forest sm:text-5xl">
+          <h2 className="font-display text-balance text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-5xl">
             {waitlist.heading}
           </h2>
         </Reveal>
         <Reveal delay={80}>
-          <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-ink">
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-slate">
             {waitlist.subhead}
           </p>
         </Reveal>
@@ -73,7 +73,7 @@ export default function WaitlistCTA() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, ease: "easeOut" }}
-                  className="flex items-center justify-center gap-3 rounded-2xl border border-sage/30 bg-sage-tint px-6 py-5 text-forest"
+                  className="flex items-center justify-center gap-3 rounded-card border border-sun/40 bg-sun-tint px-6 py-5 text-ink"
                   role="status"
                 >
                   <CheckCircle2 className="h-6 w-6 flex-shrink-0" aria-hidden="true" />
@@ -104,7 +104,7 @@ export default function WaitlistCTA() {
                       disabled={submitting}
                       aria-invalid={error ? true : undefined}
                       aria-describedby={error ? "waitlist-error" : undefined}
-                      className="h-[52px] w-full rounded-2xl border border-line bg-white px-5 text-base text-forest placeholder:text-ink/50 focus-visible:border-sage disabled:opacity-60"
+                      className="h-[52px] w-full rounded-lg border-[1.5px] border-line bg-surface px-5 text-base text-ink placeholder:text-slate/60 focus-visible:border-sky focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-sky/20 disabled:opacity-60"
                     />
                   </div>
                   <motion.button
@@ -113,7 +113,7 @@ export default function WaitlistCTA() {
                     whileHover={submitting ? undefined : { y: -2 }}
                     whileTap={submitting ? undefined : { y: 0, scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                    className="inline-flex h-[52px] items-center justify-center gap-2 rounded-2xl bg-sage-btn px-6 text-base font-semibold text-white shadow-soft transition-colors hover:bg-sage-deep disabled:cursor-not-allowed disabled:opacity-70"
+                    className="inline-flex h-[52px] items-center justify-center gap-2 rounded-xl bg-deep px-6 text-base font-semibold tracking-[0.02em] text-white shadow-soft transition-colors hover:bg-deep-dark disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {submitting ? (
                       <>
@@ -137,7 +137,7 @@ export default function WaitlistCTA() {
             {error && !submitted && (
               <p
                 id="waitlist-error"
-                className="mt-3 text-left text-sm font-medium text-clay-text"
+                className="mt-3 text-left text-sm font-medium text-clay"
                 role="alert"
               >
                 {error}
@@ -145,7 +145,7 @@ export default function WaitlistCTA() {
             )}
 
             {!submitted && (
-              <p className="mt-4 text-sm text-ink/70">
+              <p className="mt-4 text-sm text-slate/80">
                 No spam, ever. We&apos;ll only email you about Nura.
               </p>
             )}

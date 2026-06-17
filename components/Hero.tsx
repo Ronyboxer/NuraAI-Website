@@ -11,11 +11,12 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-cream pt-32 pb-24 sm:pt-36 sm:pb-32"
+      className="relative overflow-hidden bg-sky-gradient pt-32 pb-24 sm:pt-36 sm:pb-32"
     >
-      {/* Soft sage radial glow behind the hero */}
+      {/* The single warm "sun" glow — the one human-warmth moment up top. */}
       <Glow
         animate
+        tone="sun"
         className="left-1/2 top-[-8rem] h-[36rem] w-[36rem] -translate-x-1/2 opacity-90 sm:h-[44rem] sm:w-[44rem]"
       />
 
@@ -23,21 +24,21 @@ export default function Hero() {
         {/* Left: copy */}
         <div className="text-center lg:text-left">
           <p
-            className="enter-up mb-5 inline-flex items-center gap-2 rounded-full bg-clay-tint px-4 py-1.5 text-sm font-semibold text-clay-text"
+            className="enter-up mb-5 inline-flex items-center gap-2 rounded-full bg-sun-tint px-4 py-1.5 text-sm font-semibold text-clay"
             style={{ animationDelay: "0ms" }}
           >
             {hero.eyebrow}
           </p>
 
           <h1
-            className="enter-up font-display text-balance text-[2.6rem] font-semibold leading-[1.08] tracking-tight text-forest sm:text-6xl"
+            className="enter-up font-display text-balance text-[2.6rem] font-semibold leading-[1.08] tracking-tight text-ink sm:text-6xl"
             style={{ animationDelay: "60ms" }}
           >
             {hero.headline}
           </h1>
 
           <p
-            className="enter-up mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-ink lg:mx-0"
+            className="enter-up mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-slate lg:mx-0"
             style={{ animationDelay: "120ms" }}
           >
             {hero.subhead}

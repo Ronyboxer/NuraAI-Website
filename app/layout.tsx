@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Lora, Plus_Jakarta_Sans } from "next/font/google";
 import Providers from "@/components/Providers";
 import "./globals.css";
 
-const fraunces = Fraunces({
+// Display / headings: Lora (warm, classic serif). Body / UI: Plus Jakarta Sans.
+const lora = Lora({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-fraunces",
+  variable: "--font-lora",
   display: "swap",
 });
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -37,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
-      <body className="bg-cream font-sans text-ink antialiased">
+    <html lang="en" className={`${lora.variable} ${jakarta.variable}`}>
+      <body className="bg-canvas font-sans text-slate antialiased">
         <Providers>{children}</Providers>
       </body>
     </html>
