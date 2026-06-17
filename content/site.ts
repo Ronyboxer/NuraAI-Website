@@ -12,10 +12,10 @@ export const nav = {
 };
 
 export const hero = {
-  eyebrow: "For families living with dementia and memory loss",
+  eyebrow: "For families facing memory loss",
   headline: "The same kind answer, every time they ask.",
   subhead:
-    "Nura is a gentle voice companion for people living with dementia and Alzheimer's. Your family writes the answers — Nura shares them warmly, patiently, and only ever the truth you've given it.",
+    "Nura is a gentle voice companion for people living with dementia and Alzheimer's. Your family writes the answers and Nura shares them warmly, patiently, and only ever the truth you've given it.",
   primaryCta: "Join the waitlist",
   secondaryCta: "See how it works",
 };
@@ -58,7 +58,7 @@ export const howItWorks = {
     {
       icon: "Heart",
       title: "They hear the truth, warmly",
-      body: "Nura finds the answer you wrote and says it kindly — the 40th time as gently as the first.",
+      body: "Nura finds the answer you wrote and says it kindly every time. No matter how many times they ask.",
     },
   ],
 };
@@ -68,13 +68,13 @@ export const safety = {
   body1:
     "Most AI guesses when it doesn't know. For someone living with memory loss, a confident wrong answer can be frightening. Nura is built the opposite way.",
   body2:
-    "Every answer comes only from what your family has written — never invented, never imagined. If Nura doesn't have an answer, it gently says so, in the words you chose. And it never corrects or argues. It comforts.",
+    "Every answer comes only from what your family has written it is never invented, never imagined. If Nura doesn't have an answer, it gently says so, in the words you chose. And it never corrects or argues. It comforts.",
   callout: "Your words in. Your words out. Nothing made up.",
 };
 
 export const whoItsFor = {
   heading: "Made for memory loss — and the families who carry it.",
-  body: "Nura supports older adults living with dementia, Alzheimer's, and other forms of cognitive decline, and the spouses, children, and grandchildren caring for them. It works alongside you — never instead of you.",
+  body: "Nura supports older adults living with dementia, Alzheimer's, and other forms of cognitive decline, and the spouses, children, and grandchildren caring for them. It works alongside you, never instead of you.",
 };
 
 export const features = {
