@@ -54,7 +54,7 @@ export default function AnswerDemo() {
 
   return (
     <div
-      className="relative w-full max-w-md"
+      className="relative w-full max-w-md animate-float-slow"
       role="img"
       aria-label={`Nura demo. Question: ${current.question} Answer: ${current.answer}`}
     >
@@ -68,15 +68,19 @@ export default function AnswerDemo() {
 
         {/* Header row */}
         <div className="relative mb-6 flex items-center gap-2.5">
-          {/* Warm sun tile + dark ink icon — echoes the patient talk control. */}
-          <span className="grid h-8 w-8 place-items-center rounded-[0.7rem] bg-sun shadow-talk">
-            <Volume2 className="h-4 w-4 text-ink" aria-hidden="true" />
+          {/* Bright moss tile + dark ink icon — echoes the patient talk control. */}
+          <span className="grid h-8 w-8 place-items-center rounded-[0.7rem] bg-moss-gradient shadow-talk">
+            <Volume2 className="h-4 w-4 text-onaccent" aria-hidden="true" />
           </span>
           <span className="font-display text-lg font-semibold text-ink">
             Nura
           </span>
           <span className="ml-auto inline-flex items-center gap-1.5 text-xs font-medium text-slate">
-            <span className="h-2 w-2 rounded-full bg-sky" />
+            {/* Moss dot with a slow ripple — Nura is listening. */}
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inset-0 animate-ripple rounded-full bg-moss-bright" />
+              <span className="relative h-2 w-2 rounded-full bg-moss-bright" />
+            </span>
             Listening
           </span>
         </div>

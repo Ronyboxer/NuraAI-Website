@@ -113,7 +113,7 @@ export default function WaitlistCTA() {
                     whileHover={submitting ? undefined : { y: -2 }}
                     whileTap={submitting ? undefined : { y: 0, scale: 0.98 }}
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                    className="inline-flex h-[52px] items-center justify-center gap-2 rounded-xl bg-deep px-6 text-base font-semibold tracking-[0.02em] text-white shadow-soft transition-colors hover:bg-deep-dark disabled:cursor-not-allowed disabled:opacity-70"
+                    className="sheen inline-flex h-[52px] items-center justify-center gap-2 rounded-xl bg-forest-gradient px-6 text-base font-semibold tracking-[0.02em] text-ink shadow-soft ring-1 ring-inset ring-white/5 transition-[filter] hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     {submitting ? (
                       <>

@@ -7,16 +7,16 @@ export default function SafetyPromise() {
   return (
     <section
       id="safety"
-      className="relative overflow-hidden bg-deep py-32 text-white"
+      className="relative overflow-hidden bg-deepest py-32 text-ink"
     >
-      {/* Soft sky glow on the dark panel */}
-      <Glow className="left-1/2 top-1/2 h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/2 opacity-40" />
+      {/* Soft moss glow on the deepest panel */}
+      <Glow className="left-1/2 top-1/2 h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/2 opacity-60" />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
         <Reveal>
-          {/* Warm sun tile + dark ink icon — echoes the trust/affirmation accent. */}
-          <span className="mb-7 inline-grid h-16 w-16 place-items-center rounded-2xl bg-sun shadow-talk">
-            <ShieldCheck className="h-8 w-8 text-ink" aria-hidden="true" />
+          {/* Bright moss tile + dark ink icon — the trust/affirmation accent. */}
+          <span className="mb-7 inline-grid h-16 w-16 place-items-center rounded-2xl bg-moss-gradient shadow-talk">
+            <ShieldCheck className="h-8 w-8 text-onaccent" aria-hidden="true" />
           </span>
         </Reveal>
 

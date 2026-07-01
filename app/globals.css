@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: #f6f9fd; /* canvas — clear morning sky */
-    --foreground: #1f3148; /* ink — text primary */
+    --background: #202423; /* canvas — dark slate ground */
+    --foreground: #edefe7; /* ink — warm off-white text */
   }
 
   html {
@@ -17,6 +17,14 @@
 
   body {
     background: var(--background);
+    /* Dark slate ground with a breath of light from the top — never dead flat. */
+    background-image: radial-gradient(
+      135% 100% at 50% 0%,
+      #272d2a 0%,
+      #202423 55%,
+      #191d1c 100%
+    );
+    background-attachment: fixed;
     color: var(--foreground);
     font-feature-settings: "kern";
     text-rendering: optimizeLegibility;
@@ -25,9 +33,9 @@
   }
 
   /* Visible, consistent focus rings on every interactive element.
-     Sky-blue outline — never color alone. */
+     Bright-moss outline — never color alone. */
   :focus-visible {
-    outline: 3px solid #5a8fd6; /* sky */
+    outline: 3px solid #93b497; /* bright moss */
     outline-offset: 2px;
     border-radius: 8px;
   }
@@ -35,6 +43,12 @@
   /* Lora benefits from gentle optical sizing. */
   .font-display {
     font-optical-sizing: auto;
+  }
+
+  /* Selection reads clearly on the dark ground. */
+  ::selection {
+    background: rgba(110, 144, 116, 0.42);
+    color: #edefe7;
   }
 }
 
@@ -66,6 +80,33 @@
 
   .enter-up {
     animation: enter-up 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  /*
+   * A soft moss "sheen" that sweeps across a filled button on hover. Purely
+   * decorative — the ::before is clipped to the button and slides through once.
+   */
+  .sheen {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .sheen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      100deg,
+      transparent 20%,
+      rgba(237, 239, 231, 0.18) 50%,
+      transparent 80%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .sheen:hover::before {
+    transform: translateX(120%);
   }
 }
 

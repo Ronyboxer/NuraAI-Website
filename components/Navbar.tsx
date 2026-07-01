@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Wordmark */}
         <a
           href="#top"
-          className="flex items-center gap-2.5 rounded-lg font-display text-2xl font-semibold tracking-tight text-deep"
+          className="flex items-center gap-2.5 rounded-lg font-display text-2xl font-semibold tracking-tight text-ink"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

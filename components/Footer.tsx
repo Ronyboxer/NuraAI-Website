@@ -17,7 +17,7 @@ export default function Footer() {
                 aria-hidden="true"
                 className="h-8 w-8 rounded-full"
               />
-              <span className="font-display text-xl font-semibold text-deep">
+              <span className="font-display text-xl font-semibold text-ink">
                 {footer.brand}
               </span>
             </div>

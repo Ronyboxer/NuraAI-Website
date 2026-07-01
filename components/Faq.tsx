@@ -41,7 +41,7 @@ export default function Faq() {
                       <motion.span
                         animate={{ rotate: isOpen ? 45 : 0 }}
                         transition={{ duration: 0.25, ease: "easeOut" }}
-                        className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-full bg-tint text-deep"
+                        className="grid h-8 w-8 flex-shrink-0 place-items-center rounded-full bg-tint text-sky"
                       >
                         <Plus className="h-5 w-5" aria-hidden="true" />
                       </motion.span>

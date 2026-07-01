@@ -16,14 +16,15 @@ interface ButtonProps {
 }
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold tracking-[0.02em] min-h-[44px] transition-colors duration-200 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-sky";
+  "sheen inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold tracking-[0.02em] min-h-[44px] transition-colors duration-200 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-sky";
 
 const variants: Record<Variant, string> = {
-  // Deep blue-slate fill + white text — the default for small-text actions.
-  primary: "bg-deep text-white shadow-soft hover:bg-deep-dark",
-  // White surface with a hairline border + deep text; hover tints to sky.
+  // Deep moss fill + off-white text — the default for small-text actions.
+  primary:
+    "bg-forest-gradient text-ink shadow-soft ring-1 ring-inset ring-white/5 hover:brightness-110",
+  // Dark surface with a hairline border + off-white text; hover lifts to moss.
   secondary:
-    "bg-surface text-deep border border-line hover:border-sky hover:bg-tint",
+    "bg-surface text-ink border border-line hover:border-sky hover:bg-tint",
 };
 
 export default function Button({
